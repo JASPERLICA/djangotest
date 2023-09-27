@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据展示</title>
+</head>
+<body>
+<h1>数据展示</h1>
+<table border="1" width="100%">
+    <thead>
+    <tr>
+        <th>序号</th><th>名称</th><th>日期</th><th>时间</th><th>图像</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for obj in data_list %}
+        <tr>
+            <td>{{ obj.id }}</td>
+            <td>{{ obj.name }}</td>
+            <td>{{ obj.date }}</td>
+            <td>{{ obj.time }}</td>
+<!--            <td>{{ obj.image }}</td>-->
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>
+</body>
+</html>
